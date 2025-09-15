@@ -93,8 +93,16 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
-    public Contact getContactByNumber(){
+    public Contact getContactByNumber(int phone){
+        initializeIterator();
+        while(hasNext()){
+            Contact contact = next();
+            if(contact.getPhone()==phone){
+                return contact;
+            }
 
+        }
+        return null;
     }
 
 }
