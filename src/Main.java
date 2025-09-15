@@ -24,6 +24,8 @@ public class Main {
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
     public static final String QUIT_MSG = "Goodbye!";
     public static final String COMMAND_ERROR = "Unknown command.";
+    public static final String NUMBER_DOES_NOT_EXIST = "Phone number does not exist.";
+
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -53,6 +55,8 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
+                case GET_NUMBER:
+                    getContactByNumber(in,cBook);
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -62,6 +66,23 @@ public class Main {
         System.out.println(QUIT_MSG);
         System.out.println();
         in.close();
+    }
+
+    /**
+     * Gets the contact of the given phone number
+     * @param in Scanner for the standard input
+     * @param cBook Contact Book
+     */
+    private static void getContactByNumber(Scanner in, ContactBook cBook) {
+        int phone= in.nextInt(); in.nextLine();
+        Contact contact = cBook.getContactByNumber(phone);
+        if(contact == null){
+            System.out.println(NUMBER_DOES_NOT_EXIST);
+        }else{
+            System.out.println(contact.getName());
+        }
+
+
     }
 
     private static String getCommand(Scanner in) {
