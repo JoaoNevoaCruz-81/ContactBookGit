@@ -7,3 +7,6 @@ You will notice some things need to be updated in this code. It was originally m
 # Alunos do projeto
 
 68059 João Cruz
+68022 Bernardo Lobão
+
+Nota: Este grupo é composto por dois membros porque o número de alunos no turno prático impossibilita que todos os grupos sejam compostos por três membros.
