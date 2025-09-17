@@ -105,8 +105,9 @@ public class ContactBook {
     }
 
     public boolean hasSharedPhone() {
-        for (int i = counter - 1; i > 0; i--) {
-            initializeIterator();
+        initializeIterator();
+        for (int i = 0; i < counter; i++) {
+            currentContact = i+1;
             while (hasNext()) {
                 Contact c = next();
                 if (c.getPhone() == contacts[i].getPhone())
