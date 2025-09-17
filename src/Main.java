@@ -63,7 +63,7 @@ public class Main {
                     getContactByNumber(in,cBook);
                     break;
                 case EQUAL_PHONE:
-                    checkEqualPhoneNumbers(cBook);
+                    sharePhone(cBook);
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -176,7 +176,7 @@ public class Main {
         else System.out.println(BOOK_EMPTY);
     }
 
-    private static void sharePhone(Scanner in, ContactBook cBook) {
+    private static void sharePhone(ContactBook cBook) {
         if (cBook.hasSharedPhone())
             System.out.println(PHONE_SHARED);
         else System.out.println(PHONE_NOT_SHARED);
