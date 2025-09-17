@@ -104,4 +104,7 @@ public class ContactBook {
         return null;
     }
 
+    public boolean hasSharedPhone() {
+        return false;
+    }
 }
