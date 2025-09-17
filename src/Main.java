@@ -64,6 +64,7 @@ public class Main {
                     break;
                 case EQUAL_PHONE:
                     sharePhone(cBook);
+                    break;
                 default:
                     System.out.println(COMMAND_ERROR);
             }
